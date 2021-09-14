@@ -1,11 +1,11 @@
 function Convert()
 {
-    let valorElemento = document.getElementById("valor");
-    let valor = valorElemento.value;
-    let valorEmDolarNumerico = parseFloat(valor);
+    let elementValue = document.getElementById("valueKm");
+    let value = elementValue.value;
+    let valueKm = parseFloat(value);
 
-    let valorEmReal = valorEmDolarNumerico * 5;
-    let elementoValorConvertido = document.getElementById("valorConvertido");
-    let valorConvertido = "O resultado em real é R$" + valorEmReal;
-    elementoValorConvertido.innerHTML = valorConvertido;
+    let valueLy = (valueKm * 0.00000000000010570).toFixed(4);
+    let convertedValueElement = document.getElementById("convertedValue");
+    let convertedValue = valueKm + " equals to " + valueLy + " light-years.";
+    convertedValueElement.innerHTML = convertedValue;
 }
